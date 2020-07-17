@@ -67,49 +67,15 @@ Para esse desafio temos os seguintes testes:
 
 - **`should load products from AsyncStorage`**: Para que esse teste passe, no seu arquivo onde contém o contexto do carrinho, você deve permitir que todos os produtos que foram adicionados sejam buscados do AsyncStorage.
 
-## :blue_book: Principais conceitos
-### `Node`
-- #### Arquitetura Event-loop
-    Baseada em eventos e o ponto central de sua arquitetura se chama *Call Stack* executado em forma de pilha *(o último que entra é o primeiro que sai)* através de um loop eterno.
-- #### Single-thread
-    Executado em uma única thread do processador, porém em background utiliza libs do C++, a mais famosa delas é a libuv, e essa lib permite usar múltiplas threads do processamento.
-- #### Non-blocking I/O
-    A conexão se mantém aberta, possibilitando retorno das informações em partes.
-
-### `API`
-- #### Fluxo da requisição
-    Cliente - servidor - cliente
-- #### Benefícios
-    - Múltiplos clientes (front-end), mesmo back-end
-    - Protocolo de comunicação padronizado. (JSON)
-- #### Tipos de parâmetros
-    - **Query Params**: Filtros e paginação
-    - **Route Params**: Identificar recursos (Atualizar/Deletar)
-    - **Request Body**: Conteúdo na hora de riar ou editar um recurso (JSON)
-- #### HTTP codes
-    - **1xx**: Informational
-    - **2xx**: Success
-        - 200: SUCCESS
-        - 201: CREATED
-    - **3xx**: Redirection
-        - 301: MOVED PERMANENTLY
-        - 302: MOVED
-    - **4xx**: Client Error
-        - 400: BAD REQUEST
-        - 401: UNAUTHORIZED
-        - 404: NOT FOUND
-    - **5xx** Server Error
-        - 500: INTERNAL SERVER ERROR
-
 ## :carousel_horse: Como usar
 - Clone o repositório
 - Baixe as dependências
     ```bash
     $ yarn
     ```
-- Rode a API
+- Rode o app
     ```bash
-    $ yarn dev
+    $ yarn android
     ```
 - Para rodar os testes
     ```bash
